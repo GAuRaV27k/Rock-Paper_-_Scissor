@@ -1,5 +1,9 @@
-
 import random
+
+
+player_score = 0    
+computer_score = 0
+
 def game_result(player_choice, computer_choice):
     if player_choice == computer_choice:
         return "The Match Draw!"
@@ -14,10 +18,9 @@ print(".....WELCOME TO THE GAME.....")
 OPTIONS = ["Scissor", "Paper", "Stone"]
 rounds = int(input("Enter the times you want to play the game: "))
 
-player_score = 0    
-computer_score = 0
 
-for _ in range(rounds):
+
+for i in range(rounds):
     player_choice = input("Choose 'Stone', 'Paper', 'Scissor': ").capitalize().strip()
     if player_choice not in OPTIONS:
         print("Please choose a valid option to continue the game.")
@@ -33,7 +36,7 @@ for _ in range(rounds):
     elif "Computer wins" in result:
         computer_score += 1
 
-print("\nFinal Scores:")
+
 print("\nFinal Scores:")
 print(f"You: {player_score}")
 print(f"Computer: {computer_score}")
